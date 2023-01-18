@@ -10,13 +10,18 @@ export const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
+          {/* se usa Nav.link de react-boostrap para heredar la funcion de link(react-router-dom) */}
+          {/* el as transforma el link o a en un componente de react para evitar recargar la pagina
+          y en to se coloca la ruta */}
             <Nav.Link as={Link} to="/">
               Home
             </Nav.Link>
+            {/* NavDropdown se usa para hacer un desplegable y sus hijos son NavDropdown.item */}
             <NavDropdown title="Practicas en clase" id="basic-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/">
+              <NavDropdown.Item as={Link} to="/showHideMessage">
                 Show / Hide Message
               </NavDropdown.Item>
+              {/* NavDropdown.Divider se usa para colocar una linea de separacion */}
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/">
                 Stopwatch / Timmer
