@@ -10,8 +10,8 @@ export const Header = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-          {/* se usa Nav.link de react-boostrap para heredar la funcion de link(react-router-dom) */}
-          {/* el as transforma el link o a en un componente de react para evitar recargar la pagina
+            {/* se usa Nav.link de react-boostrap para heredar la funcion de link(react-router-dom) */}
+            {/* el as transforma el link o a en un componente de react para evitar recargar la pagina
           y en to se coloca la ruta */}
             <Nav.Link as={Link} to="/">
               Home
@@ -23,7 +23,7 @@ export const Header = () => {
               </NavDropdown.Item>
               {/* NavDropdown.Divider se usa para colocar una linea de separacion */}
               <NavDropdown.Divider />
-              <NavDropdown.Item as={Link} to="/">
+              <NavDropdown.Item as={Link} to="/stopWatchTime">
                 Stopwatch / Timmer
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -34,6 +34,7 @@ export const Header = () => {
               <NavDropdown.Item as={Link} to="/">
                 Task Manager
               </NavDropdown.Item>
+              <NavDropdown.Divider />
             </NavDropdown>
             <NavDropdown title="Mis practicas" id="basic-nav-dropdown">
               <NavDropdown.Item as={Link} to="/">
@@ -44,6 +45,15 @@ export const Header = () => {
                 Task Manager with validations
               </NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/misPracticas/progressBar2">
+                Progress Bar
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/misPracticas/showHideMessage2">
+                Show hide message
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              
               <NavDropdown.Item as={Link} to="/">
                 ...
               </NavDropdown.Item>
